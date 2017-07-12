@@ -30,10 +30,9 @@ Make Sure you Machine contains these Prerequisites:
 
 ## Note
 
-* will update soon
-
+* Coming soon
 
 
 ## License
 
-The project is available under the [Free License].
+The project is available under the [Free Open License].
