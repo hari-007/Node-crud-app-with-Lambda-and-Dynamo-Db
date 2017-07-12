@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Angular To Do</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="stylesheets/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.10/angular.js"> </script>
+</head>
+<body ng-app="todoApp">
+
+<div class="jumbotron jumbotron-bg"> 
+    <div class="container">
+        <h1>TO-DO LIST CRUD APP</h1>      
+        <p>Simple bootstrap, angular and Node single page responsive app.</p> 
+    </div>
+</div>
+
+<div class="container-fluid" ng-controller="ToDoController as vm">
+    <div class="row">
+    <hr />
+        <div class="col-md-4">
+            <h3> <center> Add / Edit your task <center> </h3> <hr />
+            <create-task> </create-task>
+        </div>
+        <div class="col-md-8">
+            <h3><center> Total Lists </center></h3>
+            <hr />
+            <to-do-list> </to-do-list>
+        </div>
+    </div>
+</div>
+
+
+</body>
+<script src="javascripts/index.js"> </script>
+</html>

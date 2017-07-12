@@ -1,0 +1,31 @@
+<form name="taskForm">
+    <div class="form-group" ng-if="vm.taskEditing">
+        <labe class="control-label"> Task ID  : </labe>
+        <h4> {{vm.task.task_id}} </h4>
+    </div>
+    <div class="form-group">
+        <label for="user" class="control-label"> User </label>
+        <select id="user" name="type" class="form-control fade-label"
+                ng-model="vm.task.task_target"
+                ng-options="user as user for user in vm.users">
+            <option value="" disabled="disabled">Select any user</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="name" class="control-label"> Task Name </label>
+        <input type="text" id="name" class="form-control fade-label" ng-model="vm.task.task_title" required />
+    </div>
+
+    <div class="form-group"> 
+        <label for="description" class="control-label"> Task Description </label>
+        <textarea rows="4" id="description" class="form-control fade-label" ng-model="vm.task.task_description" required> </textarea>
+    </div>
+
+    <div class="form-group">
+        <input type="button" value="Add Task" ng-hide="vm.taskEditing" class="btn btn-success" ng-click="vm.pushTask(vm.task);"
+             ng-disabled="!vm.task.task_title || !vm.task.task_description || !vm.task.task_target">
+
+        <input type="button" value="update Task" ng-show="vm.taskEditing" class="btn btn-primary" ng-click="vm.edited(vm.task)">
+        <input type="button" value="clear" ng-click="vm.clearTask()" class="btn btn-warning pull-right">
+    </div>
+</form>
