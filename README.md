@@ -1,13 +1,13 @@
 # Node-crud-app-with-Lambda-and-Dynamo-Db
-A sample CRUD App with Angular, Node as client and Lambda, Dynamo DB as backend 
+A sample CRUD App with Angular, Node as client and Lambda, Dynamo DB as backend
 
 
 ## Quick start
 
 Make Sure you Machine contains these Prerequisites:
 
-1. Both Node (> 5.10.0 ) and NPM (> 3.8.3 ) are required. 
-   If not go to [Node & NPM download page](https://nodejs.org/en/download/) and install 
+1. Both Node (> 5.10.0 ) and NPM (> 3.8.3 ) are required.
+   If not go to [Node & NPM download page](https://nodejs.org/en/download/) and install
 2. Make sure Git (> 1.9.0) is installed. If not check check this [Git Download Page](https://git-scm.com/)   `you'd like to use.`
 
 3. Need to create [manifest.yml](#) file on root level like below with required private details for project.
@@ -44,10 +44,9 @@ applicationEnvironment:
 
 ## Note
 
-* will update soon
-
+* Coming soon
 
 
 ## License
 
-The project is available under the [Free License].
+The project is available under the [Free Open License].
