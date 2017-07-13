@@ -10,6 +10,20 @@ Make Sure you Machine contains these Prerequisites:
    If not go to [Node & NPM download page](https://nodejs.org/en/download/) and install 
 2. Make sure Git (> 1.9.0) is installed. If not check check this [Git Download Page](https://git-scm.com/)   `you'd like to use.`
 
+3. Need to create [manifest.yml](#) file on root level like below with required private details for project.
+
+```
+---
+applicationEnvironment:
+  region: ------
+  service: ------
+  AWS_ACCESS_KEY: ------
+  AWS_SECRET_KEY: -------
+  APIKey: -------
+  deployStage: -----
+  path: -----
+```
+
 
 ## Installation
 
@@ -18,8 +32,6 @@ Make Sure you Machine contains these Prerequisites:
 * `cd /path/to/your/project`
 
 * `git clone https://github.com/hari-007/Node-crud-app-with-Lambda-and-Dynamo-Db.git`
-
-* `bower install`
 
 * `npm install`
 

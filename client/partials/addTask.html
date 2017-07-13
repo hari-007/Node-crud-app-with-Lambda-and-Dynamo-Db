@@ -22,10 +22,17 @@
     </div>
 
     <div class="form-group">
-        <input type="button" value="Add Task" ng-hide="vm.taskEditing" class="btn btn-success" ng-click="vm.pushTask(vm.task);"
+        <input type="button" ng-value="vm.pushRequesting ? 'Sending ...' : 'Add Task' " ng-hide="vm.taskEditing" class="btn btn-success" ng-click="vm.pushTask(vm.task);"
              ng-disabled="!vm.task.task_title || !vm.task.task_description || !vm.task.task_target">
 
-        <input type="button" value="update Task" ng-show="vm.taskEditing" class="btn btn-primary" ng-click="vm.edited(vm.task)">
+        <input type="button" ng-value="vm.editRequesting ? 'Sending ...' : 'update task' " ng-show="vm.taskEditing" class="btn btn-primary" ng-click="vm.editTask(vm.task)">
         <input type="button" value="clear" ng-click="vm.clearTask()" class="btn btn-warning pull-right">
+    </div>
+
+    <div class="form-group">
+        <div class="alert alert-danger alert-dismissable fade in" ng-show="vm.errMessage">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <strong>Error!</strong> {{vm.errMessage}}.
+        </div>
     </div>
 </form>

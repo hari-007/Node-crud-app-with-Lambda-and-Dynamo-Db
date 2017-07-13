@@ -25,13 +25,9 @@ AWSService.prototype.getAllItems = function(callback) {
     }); 
 }
 
-AWSService.prototype.updateItem = function() {
-    
-}
-
-AWSService.prototype.setItem = function(newItem, callback) {
-    this.awsRequestObj.method = "POST";
-    this.awsRequestObj.body = newItem;
+AWSService.prototype.updateItem = function(item, callback) {
+    this.awsRequestObj.method = "PUT";
+    this.awsRequestObj.body = JSON.stringify(item);
     request(aws4.sign(this.awsRequestObj)).then(function(response) {
         callback(response.body);
     }, function(err) {
@@ -39,8 +35,24 @@ AWSService.prototype.setItem = function(newItem, callback) {
     });
 }
 
-AWSService.prototype.deleteItem = function() {
-    
+AWSService.prototype.setItem = function(newItem, callback) {
+    this.awsRequestObj.method = "POST";
+    this.awsRequestObj.body = JSON.stringify(newItem);
+    request(aws4.sign(this.awsRequestObj)).then(function(response) {
+        callback(response.body);
+    }, function(err) {
+        callback(err)
+    });
+}
+
+AWSService.prototype.deleteItem = function(item, callback) {
+    this.awsRequestObj.method = "DELETE";
+    this.awsRequestObj.body = JSON.stringify(item);
+    request(aws4.sign(this.awsRequestObj)).then(function(response) {
+        callback(response.body);
+    }, function(err) {
+        callback(err)
+    });
 }
 
 module.exports = AWSService;
