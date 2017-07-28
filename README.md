@@ -1,4 +1,4 @@
-# Node-crud-app-with-Lambda-and-Dynamo-Db
+# Angular Node Lambda Dynamo CRUD App [ANLD] 
 A sample CRUD App with Angular, Node as client and Lambda, Dynamo DB as backend
 
 
@@ -38,7 +38,7 @@ applicationEnvironment:
 * `npm start`
 
 
-* Now you can open any Browser and type — `http://localhost:3000` to see your PJ-Web-Dashboard Application *
+* Now you can open any Browser and type — `http://localhost:3000` to see your CRUD Application
 
 
 
