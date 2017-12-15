@@ -3,7 +3,7 @@ const path = require('path');
 const favicon = require('static-favicon');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
-require('node-monkey').start({host: 'localhost', port: 50500})
+// require('node-monkey').start({host: 'localhost', port: 50500})
 
 const routes = require('./routes/index');
 
