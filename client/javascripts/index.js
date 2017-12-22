@@ -50,7 +50,7 @@ function createTask($http, $rootScope) {
                 vm.errMessage = null;
             });            
 
-            vm.clearTask = function() { console.log('eached');
+            vm.clearTask = function() {
                 vm.task = {};
                 vm.errMessage = null;
             }
@@ -66,8 +66,6 @@ function toDoList($http, $rootScope) {
         templateUrl: 'partials/showTasks.html',
         controller: function($scope, $element, $attrs) {
             var vm = this;
-            vm.loading = true;
-
             function getAllTasks() {
                 vm.list = [];
                 vm.loading = true;
@@ -96,7 +94,7 @@ function toDoList($http, $rootScope) {
                 }
             }
 
-            vm.editTask = function(task) { console.log(task);
+            vm.editTask = function(task) {
                 $rootScope.$emit('editTask', task);
             }
         },
